@@ -47,7 +47,7 @@ function Anime() {
       ra.innerHTML = temp;
       window.clearTimeout(timer);
       i == 3 ? makeWormhole() : null;
-    }, 2600 + i * 50);
+    }, 3000 + i * 50);
   }
 }
 
