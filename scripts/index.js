@@ -1,3 +1,9 @@
+document.addEventListener('keydown', function(event) {
+    if(event.keyCode == 13 || event.keyCode == 32) {
+        window.location.href='./home.html';
+    }
+});
+
 let universe = document.getElementById("universe");
 let dot = document.createElement("div");
 dot.setAttribute("class", "dot");
