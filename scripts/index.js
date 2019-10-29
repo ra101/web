@@ -22,7 +22,7 @@ for (let i = 0; i < noOfStars; i++) {
     !(i % 10) ? make_virtual() : null;
     window.clearTimeout(timer);
     i == noOfStars - 1 ? Anime() : null;
-  }, 300);
+  }, 300 + 2 * i);
 }
 
 function Anime() {
