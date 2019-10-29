@@ -8,6 +8,7 @@ div#universe {
     #0e000e 30%,
     #000000 70%
   );
+  animation: fadein 300ms ease-in;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -95,6 +96,15 @@ a#skip {
 }
 
 /*animation keyframes*/
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 @keyframes neon {
   0% {
     text-shadow: 0 0 20px rgba(10, 175, 230, 1), 0 0 20px rgba(10, 175, 230, 0);
