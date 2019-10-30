@@ -1,7 +1,7 @@
-document.addEventListener('keydown', function(event) {
-    if(event.keyCode == 13 || event.keyCode == 32) {
-        window.location.href='./home.html';
-    }
+document.addEventListener("keydown", function(event) {
+  if (event.keyCode == 13 || event.keyCode == 32) {
+    window.location.href = "./home.html";
+  }
 });
 
 let universe = document.getElementById("universe");
@@ -28,10 +28,10 @@ for (let i = 0; i < noOfStars; i++) {
 function Anime() {
   let text = [
     "",
-    "< >",
-    "< &nbsp;&nbsp;&nbsp;&nbsp; >",
+    "&lt;&gt;",
+    "&lt; &nbsp;&nbsp;&nbsp;&nbsp; &gt;",
     "- &nbsp;&nbsp;&nbsp;&nbsp; -",
-    "< RA >"
+    "&lt; RA &gt;"
   ];
   let timing = [0, 1000, 2000, 2500, 2550];
   for (let i = 0; i < text.length; i++) {
@@ -40,28 +40,43 @@ function Anime() {
       window.clearTimeout(timer);
     }, timing[i]);
   }
-  let temp = text[4];
-  for (let i = 0; i < 4; i++) {
+  let angular = ra.cloneNode();
+  angular.id = "angular";
+  angular.innerHTML = "&lt;";
+  let brackets = [];
+  for (let i = 0; i < 3; i++) {
+    let tOpen = angular.cloneNode(true);
+    tOpen.style.marginLeft = "-" + (10 * i + 15) + "%";
+    brackets.push(tOpen);
+    document.body.append(tOpen);
+    let tClose = angular.cloneNode(true);
+    tClose.innerHTML = "&gt;";
+    tClose.style.marginLeft = 10 * i + 15 + "%";
+    brackets.push(tClose);
+    document.body.append(tClose);
+  }
+
+  for (let i = 0; i < 3; i++) {
     let timer = window.setTimeout(() => {
-      temp = "< &nbsp&nbsp&nbsp&nbsp " + temp + " &nbsp&nbsp&nbsp&nbsp >";
-      ra.innerHTML = temp;
+      brackets[2 * i].style.display = "block";
+      brackets[2 * i + 1].style.display = "block";
       window.clearTimeout(timer);
-      i == 3 ? makeWormhole() : null;
+      i == 2 ? makeWormhole() : null;
     }, 3000 + i * 50);
   }
 }
 
 function makeWormhole() {
   wormhole.style.animation = "growing 5s linear";
-  ra.style.opacity = 0.7;
   document.getElementById("skip").style.display = "none";
 
   let timer = window.setTimeout(() => {
     wormhole.style.animation = "rotate 5s linear infinite";
-    ra.style.opacity = 0.5;
+    ra.style.opacity = 0.8;
+
     window.clearInterval(timer);
     window.alert("Just jump into the damn portal!");
-  }, 5000);
+  }, 4000);
 }
 
 function makeStar() {
