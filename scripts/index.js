@@ -69,14 +69,13 @@ function Anime() {
 function makeWormhole() {
   wormhole.style.animation = "growing 5s linear";
   document.getElementById("skip").style.display = "none";
-
+    ra.style.opacity = 0.7;
   let timer = window.setTimeout(() => {
     wormhole.style.animation = "rotate 5s linear infinite";
-    ra.style.opacity = 0.8;
-
+    ra.style.opacity = 0.5;
     window.clearInterval(timer);
     window.alert("Just jump into the damn portal!");
-  }, 4000);
+  }, 5000);
 }
 
 function makeStar() {
