@@ -11,25 +11,14 @@ div#universe {
   animation: fadein 300ms ease-in;
 }
 
-@media only screen and (max-width: 1000px) {
-  div#universe {
-    display: block;
-    background: radial-gradient(
-      circle at center,
-      #1d001d 0%,
-      #0e000e 30%,
-      #000000 70%
-    );
-  }
-}
-
 div.dot {
   display: block;
   position: absolute;
   color: #ff9eff;
 }
 
-div#ra {
+div#ra,
+div#angular {
   top: 50%;
   color: white;
   font-family: "MS PGothic";
@@ -43,7 +32,10 @@ div#ra {
   position: absolute;
   word-break: keep-all;
 }
-
+div#angular {
+  opacity: 0.7;
+  display: none;
+}
 h1#link a {
   position: absolute;
   color: white;
@@ -93,6 +85,30 @@ a#skip {
   border-radius: 20px;
   text-decoration: none;
   border: solid #1d001d;
+}
+
+@media only screen and (max-width: 1000px) {
+  div#universe {
+    display: block;
+    background: radial-gradient(
+      circle at center,
+      #1d001d 0%,
+      #0e000e 30%,
+      #000000 70%
+    );
+  }
+  div#wormhole img {
+    top: 20%;
+    height: 640px;
+    width: 640px;
+  }
+  div#ra,
+  div#angular {
+    font-size: 102px;
+  }
+  a#skip {
+    transform: scale(2, 2);
+  }
 }
 
 /*animation keyframes*/
