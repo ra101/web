@@ -48,12 +48,12 @@ function Anime() {
     let tOpen = angular.cloneNode(true);
     tOpen.style.marginLeft = "-" + (10 * i + 15) + "%";
     brackets.push(tOpen);
-    document.body.append(tOpen);
+    document.body.appendChild(tOpen);
     let tClose = angular.cloneNode(true);
     tClose.innerHTML = "&gt;";
     tClose.style.marginLeft = 10 * i + 15 + "%";
     brackets.push(tClose);
-    document.body.append(tClose);
+    document.body.appendChild(tClose);
   }
 
   for (let i = 0; i < 3; i++) {
@@ -86,7 +86,7 @@ function makeStar() {
   temp.style.opacity = Math.min(Math.random() + 0.1, 1);
   temp.style.animation =
     "twinkle " + Math.floor(Math.random() * 10000) + "ms infinite";
-  return universe.append(temp);
+  return universe.appendChild(temp);
 }
 
 function generateBinary() {
@@ -106,5 +106,5 @@ function make_virtual() {
   temp.style.left = Math.random() * 100 + "%";
   temp.style.animation =
     "updown " + Math.floor(Math.random() * 10000) + "ms infinite";
-  return virtual.append(temp);
+  return virtual.appendChild(temp);
 }
