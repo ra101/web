@@ -81,7 +81,19 @@ div#circle {
 }
 
 div#circle:hover {
+  animation: lock 0.2s ease-in;
+  transform: rotate(360deg);
+  transform: scale(1.1);
   box-shadow: 0px 0px 10px #af7faf;
+}
+
+@keyframes lock {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  100% {
+    transform: rotate(360deg) scale(1.1);
+  }
 }
 
 div#skills img {
