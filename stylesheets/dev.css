@@ -20,6 +20,18 @@ div#panel {
   box-shadow: 0px 0px 5px #af7faf;
 }
 
+img#pp {
+  width: 150px;
+  height: 150px;
+  box-shadow: 0px 0px 5px #af7faf;
+  border-radius: 50%;
+}
+
+img#pp:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 0px 10px #af7faf;
+}
+
 div#content {
   padding: 2%;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
