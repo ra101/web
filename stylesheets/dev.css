@@ -52,11 +52,12 @@ div#box {
   background: #ffffff;
   margin: 10px;
   width: 260px;
-  text-align:center;
 }
 
 div#box p#heading {
   font-size: 16px;
+  text-align:center;
+  
 }
 
 div#box p#heading:before {
