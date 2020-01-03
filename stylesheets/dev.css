@@ -35,7 +35,7 @@ img#pp:hover {
 div#content {
   padding: 2%;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: rgb(30, 30, 30);
+  background: #00000006;
 }
 
 div#content p#heading {
@@ -46,9 +46,9 @@ div#content p#heading {
 div#box {
   text-align: left;
   display: inline-block;
-  border: 1px solid #af7faf22;
+  border: 2px solid #af7faf33;
   padding: 5px;
-  border-radius:5px;
+  border-radius: 5px;
   background: #ffffff;
   margin: 10px;
   width: 260px;
@@ -56,31 +56,27 @@ div#box {
 
 div#box p#heading {
   font-size: 16px;
-  text-align:center;
-  
 }
 
 div#box p#heading:before {
   content: "> ";
-  color: #af7fafab;
+  color: #303030;
 }
-
 
 div#box p#heading:after {
-  content: " <";
-  color: #af7fafab;
+  content: " ;";
+  color: #303030;
 }
-
 
 div#box p#disc {
   font-size: 14px;
   color: dimgray;
 }
 
-
-div#box a:visited,div#box a:link {
-    color: #0086B3;
-  text-decoration:none;
+div#box a:visited,
+div#box a:link {
+  color: #0086b3;
+  text-decoration: none;
 }
 
 div#circle {
@@ -155,4 +151,8 @@ div#content {
 hr {
   border: none;
   border-bottom: 1px solid lightgray;
+}
+
+div#links img:hover {
+  opacity: 0.8;
 }
