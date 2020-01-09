@@ -1,6 +1,6 @@
 document.addEventListener("keydown", function(event) {
   if (event.keyCode == 13 || event.keyCode == 32) {
-    window.location.href = "./home.html";
+    window.location.href = "./dev.html";
   }
 });
 
