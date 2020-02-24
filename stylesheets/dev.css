@@ -108,7 +108,6 @@ div#circle:hover {
 
 div#skills img {
   width: 50px;
-  height: 50px;
 }
 
 div#self {
@@ -154,8 +153,16 @@ hr {
   border-bottom: 1px solid lightgray;
 }
 
+table#proj_header img {
+  width: 80px;
+}
+
 div#links img:hover {
   opacity: 0.8;
+}
+
+font#tagline {
+  font-size: 16px;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -174,16 +181,63 @@ div#links img:hover {
   div#self {
     margin-left: 10%;
     margin-right: 10%;
-    font-size: x-large;
+    font-size: xx-large;
   }
   div#self h1 {
-    font-size: 72px;
+    font-size: 84px;
   }
   div#links td {
-    font-size: 24px;
+    font-size: 36px;
   }
   div#links img {
     width: 50px;
   }
 
+  table#proj_header p#heading {
+    font-size: 72px;
+  }
+  font#tagline {
+    font-size: 24px;
+  }
+
+  div#skills img {
+    width: 80px;
+  }
+
+  table#proj_header img {
+    width: 120px;
+    height: 120px;
+  }
+
+  div#circle {
+    padding: 50px;
+    margin: 20px;
+  }
+
+  div#truck {
+    justify-content: center;
+  }
+
+  div#toolbox {
+    justify-content: center;
+  }
+
+  div#box {
+    padding: 50px;
+    padding-top: 30px;
+    margin: 25px;
+    width: 100%;
+  }
+
+  div#box p#heading {
+    font-size: 36px;
+  }
+
+  div#box p#disc {
+    font-size: 24px;
+  }
+
+  div#box img {
+    width: 300px;
+  }
 }
