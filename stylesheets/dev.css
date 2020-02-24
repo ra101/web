@@ -43,9 +43,15 @@ div#content p#heading {
   font-size: 36px;
 }
 
+div#truck,
+div#toolbox {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
 div#box {
   text-align: left;
-  display: inline-block;
   border: 2px solid #af7faf33;
   padding: 5px;
   border-radius: 5px;
@@ -59,7 +65,7 @@ div#box p#heading {
 }
 
 div#box p#heading:before {
-  content: '> ';
+  content: "> ";
   color: #202020;
 }
 
@@ -151,6 +157,7 @@ hr {
 div#links img:hover {
   opacity: 0.8;
 }
+
 @media only screen and (max-width: 1000px) {
   div#wrapper {
     display: block;
@@ -160,5 +167,23 @@ div#links img:hover {
     width: 100%;
     min-height: 0;
   }
-}
+  img#pp {
+    width: 300px;
+    height: 300px;
+  }
+  div#self {
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: x-large;
+  }
+  div#self h1 {
+    font-size: 72px;
+  }
+  div#links td {
+    font-size: 24px;
+  }
+  div#links img {
+    width: 50px;
+  }
 
+}
