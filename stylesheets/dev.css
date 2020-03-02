@@ -180,16 +180,16 @@ font#tagline {
     min-height: 0;
   }
   img#pp {
-    width: 300px;
-    height: 300px;
+    width: 500px;
+    height: 500px;
   }
   div#self {
     margin-left: 10%;
     margin-right: 10%;
-    font-size: xx-large;
+    font-size: xxx-large;
   }
   div#self h1 {
-    font-size: 84px;
+    font-size: 96px;
   }
   div#links td {
     font-size: 36px;
@@ -199,11 +199,11 @@ font#tagline {
   }
 
   table#proj_header p#heading {
-    font-size: 72px;
+    font-size: 96px;
   }
 
   font#tagline {
-    font-size: 24px;
+    font-size: 48px;
   }
 
   div#skills img {
@@ -218,6 +218,10 @@ font#tagline {
   div#circle {
     padding: 50px;
     margin: 20px;
+  }
+
+  div#circle img {
+    width: 100px;
   }
 
   div#truck {
@@ -236,11 +240,11 @@ font#tagline {
   }
 
   div#box p#heading {
-    font-size: 36px;
+    font-size: 72px;
   }
 
   div#box p#disc {
-    font-size: 24px;
+    font-size: 48px;
   }
 
   div#box img {
