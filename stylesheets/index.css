@@ -366,10 +366,11 @@ div.background table.edu td#date {
     font-size: 84px;
   }
   div#links td {
-    font-size: 36px;
+    font-size: 48px;
   }
   div#links img {
-    width: 50px;
+    padding:20px ;
+    width: 100px;
   }
 
 
