@@ -14,7 +14,10 @@
     </head>
     <body>
         <div id="wrapper">
+            <div id="progressbar"></div>
+            <div id="scrollPath"></div>
             <div id="panel">
+                <br>
                 <div id="self">
                     <center>
                         <img src="../assets/pp.jpg" id="pp">
@@ -87,6 +90,7 @@
                 <div id="content">
                     <div class="full_scale">
                         <h1 id="headiers" style="font-size: 4em;">
+                            <font style="font-family: 'Courier New', Courier, monospace;">></font>
                             Hi
                             <font id="ip_add">127.0.0.1</font>
                             !
@@ -323,14 +327,5 @@
                     <br>
                 </div>
             </div>
-            <script>  
-                    var xhttp = new XMLHttpRequest();
-                    xhttp.onreadystatechange = function() {
-                      if (this.readyState == 4 && this.status == 200) {
-                       document.getElementById("ip_add").innerHTML = this.responseText;
-                      }
-                    };
-                    xhttp.open("GET", "https://api.ipify.org/", true);
-                    xhttp.send();
-            </script>
+            <script src="./scripts/index.js"></script>
         </html>
