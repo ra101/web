@@ -45,6 +45,7 @@ img#pp:hover {
 div#content {
   margin-left: calc(25% + 10px);
   padding: 2%;
+  padding-bottom: 0px;
   background: #121212;
 }
 
@@ -73,12 +74,15 @@ div#toolbox {
 
 div#box {
   text-align: left;
-  border: 2px solid #0000001e;
-  padding: 5px;
+  box-shadow: 0px 0px 10px #1200004e;
+  padding: 1.5em;
+  padding-top: 0;
   border-radius: 5px;
   background: #181818;
-  margin: 10px;
-  width: calc(100% - 20px);
+  margin-bottom: 1em;
+  margin-top: 1em;
+
+  width: calc(100% - 2em);
 }
 
 div#box p#heading {
@@ -100,14 +104,14 @@ div#box p#heading:after {
 
 div#box p#disc {
   font-size: 16px;
-  color: #fa8072ab;
+  color: #fa8072  ;
   text-shadow: 0px 0px 2px black;
 }
 
 
 div#box a:visited,
 div#box a:link {
-  color: #fd9b90;
+  color: #ffb9b1;
   font-size: 18px;
   text-shadow: 0px 0px 2px black;
 }
@@ -291,6 +295,7 @@ div.background table th{
   text-align: left;
   font-size: 1.5em;
   opacity: 1;
+  text-shadow: 0px 0px 10px black;
 }
 
 div.background table td{
@@ -298,36 +303,38 @@ div.background table td{
   padding-left:20px;
   font-size: 1.2em;
   opacity: 1;
+  text-shadow: 0px 0px 10px black;
 }
 
 div.background table td#date{
   text-align: right;
+  ;
 }
 
 
 div.background table.exp th {
-  color:gold;
+  color:#338fec;
 }
 
 div.background table.exp td {
-  color:#ffe342;
+  color:#86bbf0;
 }
 
 div.background table.exp td#date {
-  color: darkgoldenrod;
+  color: #4a7cbe;
 }
 
 
 div.background table.edu th {
-  color:springgreen;
+  color:#00ad57;
 }
 
 div.background table.edu td {
-  color:lightgreen;
+  color:#90ee90;
 }
 
 div.background table.edu td#date {
-  color: seagreen;
+  color: #2e8b57;
 }
 
 
@@ -350,7 +357,7 @@ div#progressBar {
   top:0;
   right:0;
   width:5px;
-  height:100%;
+  height:0%;
   background: linear-gradient(to top, #008aff, #00ffe7);
   animation: animate-scroll 5s linear infinite;
 }
@@ -376,6 +383,16 @@ div#progressBar {
   filter: blur(10px);
 }
 
+div#footer {
+  z-index:10;
+  width: 100%;
+  bottom: 0px;
+  padding: 20px;
+  margin-left: -2%;
+  font-size: 2em;
+  text-align: center;
+  box-shadow: 0px 0px 10px red;
+}
 
 @media only screen and (max-width: 1000px) {
   div#wrapper{
@@ -397,6 +414,7 @@ div#progressBar {
     min-height: 100vh;
     padding: 5%;
     position: relative;
+    padding-bottom: 0px;
     margin:0; 
   }
   img#pp {
@@ -419,7 +437,11 @@ div#progressBar {
     width: 100px;
   }
 
-
+  div#box{
+    margin-bottom: 1.5em;
+    margin-top:1.5em;
+    box-shadow: 0px 0px 10px #1200004e;
+  }
   div#box p#heading {
     font-size: 3em;
     line-height: 1.5em;
@@ -461,6 +483,13 @@ div#progressBar {
 
   div.skillset li{
     font-size: 2em;
+  }
+
+  div#footer {
+    font-size: 4em;
+    padding-bottom:1em;
+    padding-top:1em;
+    margin-right:1%;
   }
   
 }
