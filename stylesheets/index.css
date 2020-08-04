@@ -1,189 +1,240 @@
-div#universe {
-  display: block;
-  height: 100%;
-  margin: 0;
-  background: radial-gradient(
-    ellipse at center,
-    #1d001d 0%,
-    #0e000e 30%,
-    #000000 70%
-  );
-  animation: fadein 300ms ease-in;
-}
-
-div.dot {
-  display: block;
-  position: absolute;
-  color: #ff9eff;
-}
-
-div#ra,
-div#angular {
-  top: 50%;
-  color: white;
-  font-family: "MS PGothic";
-  text-align: center;
-  white-space: nowrap;
-  font-size: 48px;
-  font-weight: bold;
-  margin-top: -24px;
-  width: 100%;
-  animation: neon 900ms ease-in-out infinite alternate;
-  position: absolute;
-  word-break: keep-all;
-}
-div#angular {
-  opacity: 0.45;
-  display: none;
-}
-h1#link a {
-  position: absolute;
-  color: white;
-  font-size: 72px;
-  font-family: "Segoe UI";
-  width: 100%;
-  text-decoration: none;
-  bottom: 10%;
-  text-align: center;
-}
-
-div.number {
-  writing-mode: vertical-rl;
-  font-size: 24px;
-  color: #008f11;
-  font-family: "Courier New", Courier, monospace;
-  text-orientation: upright;
-  font-weight: bold;
-  position: absolute;
+div#wrapper {
   top: 0px;
-  animation: updown 1000ms infinite;
-}
-
-div#wormhole {
   width: 100%;
-  top: 15px;
-  align-content: center;
-  height: 100%;
+  left: 0px;
+
   position: absolute;
+  background: #121212;
+  display: flex;
+  flex-direction: row;
+  align-content: stretch;
 }
 
-div#wormhole img {
-  height: 320px;
-  width: 320px;
-  transform: scale(0, 0);
-  opacity: 0.9;
+div#panel {
+  background: #121212;
+  min-height: 100vh;
+  width: 22%;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-top: 2%;
+  box-shadow: 0px 0px 10px black;
+  z-index:10;
 }
 
-a#skip {
-  position: absolute;
-  bottom: 5%;
-  right: 5%;
-  padding: 10px;
-  font-family: "Courier New", Courier, monospace;
-  color: white;
-  background: black;
-  border-radius: 20px;
+a {
   text-decoration: none;
-  border: solid #1d001d;
+}
+
+img#pp {
+  width: 150px;
+  height: 150px;
+  box-shadow: 0px 0px 5px orangered;
+  border-radius: 50%;
+}
+
+img#pp:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 0px 10px orangered;
+}
+
+div#content {
+  padding: 2%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #00000006;
+}
+
+div#content p#heading {
+  font-weight: bolder;
+  font-size: 36px;
+}
+
+div#truck,
+div#toolbox {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+div#box {
+  text-align: left;
+  border: 2px solid #af7faf33;
+  padding: 5px;
+  border-radius: 5px;
+  background: #ffffff;
+  margin: 10px;
+  width: 260px;
+}
+
+div#box p#heading {
+  font-size: 16px;
+}
+
+div#box p#heading:before {
+  content: "> ";
+  color: #202020;
+}
+
+div#box p#disc {
+  font-size: 14px;
+  color: dimgray;
+}
+
+div#box a:visited,
+div#box a:link {
+  color: #0086b3;
+}
+
+
+
+@keyframes lock {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  100% {
+    transform: rotate(360deg) scale(1.1);
+  }
+}
+
+div#skills img {
+  width: 50px;
+}
+
+div#self {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: dimgray;
+  line-height: 1.5em;
+}
+
+div#panel h1 {
+  color: white;
+  text-shadow: 0px 0px 10px black;
+  text-align: center;
+}
+
+table,
+th,
+td {
+  vertical-align: middle;
+  border: none;
+  padding: 7px;
+}
+
+table {
+  width: 100%;
+}
+table a:visited {
+  color: blue;
+}
+
+table a:link {
+  color: blue;
+}
+table a:hover {
+  text-decoration: underline;
+}
+th img {
+  width: 25px;
+}
+
+div#content {
+  width: 75%;
+}
+
+hr {
+  border: none;
+  border-bottom: 1px solid lightgray;
+}
+
+table#proj_header img {
+  width: 80px;
+}
+
+div#links img:hover {
+  opacity: 0.8;
+}
+
+font#tagline {
+  font-size: 16px;
 }
 
 @media only screen and (max-width: 1000px) {
-  div#universe {
+  div#wrapper {
     display: block;
-    background: radial-gradient(
-      circle at center,
-      #1d001d 0%,
-      #0e000e 30%,
-      #000000 70%
-    );
   }
-  div#wormhole img {
-    top: 20%;
-    height: 640px;
-    width: 640px;
+  div#panel,
+  div#content {
+    width: 100%;
+    min-height: 0;
   }
-  div#ra,
-  div#angular {
-    font-size: 102px;
+  img#pp {
+    width: 300px;
+    height: 300px;
   }
-  a#skip {
-    transform: scale(2, 2);
+  div#self {
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: xx-large;
+  }
+  div#self h1 {
+    font-size: 84px;
+  }
+  div#links td {
+    font-size: 36px;
+  }
+  div#links img {
+    width: 50px;
+  }
+
+  table#proj_header p#heading {
+    font-size: 72px;
+  }
+
+  font#tagline {
+    font-size: 24px;
+  }
+
+  div#skills img {
+    width: 80px;
+  }
+
+  table#proj_header img {
+    width: 120px;
+    height: 120px;
+  }
+
+  div#circle {
+    padding: 50px;
+    margin: 20px;
+  }
+
+  div#truck {
+    justify-content: center;
+  }
+
+  div#toolbox {
+    justify-content: center;
+  }
+
+  div#box {
+    padding: 50px;
+    padding-top: 30px;
+    margin: 25px;
+    width: 100%;
+  }
+
+  div#box p#heading {
+    font-size: 36px;
+  }
+
+  div#box p#disc {
+    font-size: 24px;
+  }
+
+  div#box img {
+    width: 300px;
   }
 }
 
-/*animation keyframes*/
-@keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes neon {
-  0% {
-    text-shadow: 0 0 20px rgba(10, 175, 230, 1), 0 0 20px rgba(10, 175, 230, 0);
-  }
-  12% {
-    text-shadow: 0 0 20px rgba(10, 175, 230, 1.5),
-      0 0 20px rgba(10, 175, 230, 1);
-  }
-  18% {
-    text-shadow: 0 0 20px rgba(10, 175, 230, 1),
-      0 0 20px rgba(10, 175, 230, 0.2);
-  }
-  25% {
-    text-shadow: 0 0 20px rgba(10, 175, 230, 0.9),
-      0 0 20px rgba(10, 175, 230, 0.3);
-  }
-  35% {
-    text-shadow: 0 0 20px rgba(10, 175, 230, 0.8),
-      0 0 20px rgba(10, 175, 230, 0.1);
-  }
-  42% {
-    text-shadow: 0 0 20px rgba(10, 175, 230, 1.2),
-      0 0 20px rgba(10, 175, 230, 0);
-  }
-  50% {
-    text-shadow: 0 0 20px rgba(10, 175, 230, 1.6),
-      0 0 20px rgba(10, 175, 230, 1);
-  }
-  100% {
-    text-shadow: 0 0 20px rgba(10, 175, 230, 1.6),
-      0 0 20px rgba(10, 175, 230, 1);
-  }
-}
-
-@keyframes twinkle {
-  50% {
-    transform: scale(0.3);
-    opacity: 0.3;
-  }
-}
-
-@keyframes updown {
-  50% {
-    transform: translate(0, 4px);
-  }
-}
-
-@keyframes growing {
-  from {
-    transform: rotate(0deg);
-    opacity: 0;
-  }
-  to {
-    transform: rotate(360deg);
-    opacity: 0.8;
-  }
-}
-
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+div#links table {
+  margin-top: 5%;
 }
