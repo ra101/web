@@ -206,14 +206,21 @@ font#tagline {
 }
 
 @media only screen and (max-width: 1000px) {
-  div#wrapper {
-    display: block;
+  div#wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+    box-shadow: none;
   }
+
   div#panel,
   div#content {
     width: 100%;
     height: 100%;
+    padding: 0;
     position: relative;
+    margin:0; 
   }
   img#pp {
     width: 300px;
@@ -237,10 +244,7 @@ font#tagline {
  
 
   div#box {
-    padding: 50px;
-    padding-top: 30px;
-    margin: 25px;
-    width: 100%;
+    width: 95%;
   }
 
   div#box p#heading {
