@@ -336,3 +336,46 @@ div.skillset li {
   font-size: 1.2em;
   line-height: 1.5em;
 }
+
+div.background table th{
+  text-align: left;
+  font-size: 1.5em;
+  opacity: 1;
+}
+
+div.background table td{
+  padding: 0px;
+  padding-left:20px;
+  font-size: 1.2em;
+  opacity: 1;
+}
+
+div.background table td#date{
+  text-align: right;
+}
+
+
+div.background table.exp th {
+  color:gold;
+}
+
+div.background table.exp td {
+  color:#ffe342;
+}
+
+div.background table.exp td#date {
+  color: darkgoldenrod;
+}
+
+
+div.background table.edu th {
+  color:springgreen;
+}
+
+div.background table.edu td {
+  color:lightgreen;
+}
+
+div.background table.edu td#date {
+  color: seagreen;
+}
