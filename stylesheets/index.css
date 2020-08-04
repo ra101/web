@@ -420,16 +420,23 @@ div#progressBar {
   }
 
 
-  div#box p#heading , div#box p#heading a{
-    font-size: 2em;
+  div#box p#heading {
+    font-size: 3em;
+    line-height: 1.5em;
+  }
+  div#box p#heading a{
+    font-size: 0.75em;
     line-height: 1.5em;
   }
 
-  div#box p#disc,div#box p#disc a {
+  div#box p#disc {
     font-size: 2em;
     line-height: 1.5em;
   }
-
+  div#box p#disc a {
+    font-size: 1em;
+    line-height: 1.5em;
+  }
   div#box img {
     width: 300px;
   }
