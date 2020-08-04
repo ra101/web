@@ -205,60 +205,6 @@ font#tagline {
   font-size: 16px;
 }
 
-@media only screen and (max-width: 1000px) {
-  div#wrapper{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-content: center;
-    box-shadow: none;
-  }
-
-  div#panel,
-  div#content {
-    width: 100%;
-    height: 100%;
-    padding: 0;
-    position: relative;
-    margin:0; 
-  }
-  img#pp {
-    width: 300px;
-    height: 300px;
-  }
-  div#self {
-    margin-left: 10%;
-    margin-right: 10%;
-    font-size: xx-large;
-  }
-  div#self h1 {
-    font-size: 84px;
-  }
-  div#links td {
-    font-size: 36px;
-  }
-  div#links img {
-    width: 50px;
-  }
-
- 
-
-  div#box {
-    width: 95%;
-  }
-
-  div#box p#heading {
-    font-size: 64px;
-  }
-
-  div#box p#disc {
-    font-size: 24px;
-  }
-
-  div#box img {
-    width: 300px;
-  }
-}
 
 div#links table {
   margin-top: 5%;
@@ -382,4 +328,85 @@ div.background table.edu td {
 
 div.background table.edu td#date {
   color: seagreen;
+}
+
+
+@media only screen and (max-width: 1000px) {
+  div#wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+    box-shadow: none;
+  }
+
+.full_scale {
+  min-height: 0vh;
+  display: block;
+}
+
+  div#panel,
+  div#content {
+    width: 100%;
+    min-height: 100vh;
+    padding: 5%;
+    position: relative;
+    margin:0; 
+  }
+  img#pp {
+    width: 300px;
+    height: 300px;
+  }
+  div#self {
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: xx-large;
+  }
+  div#self h1 {
+    font-size: 84px;
+  }
+  div#links td {
+    font-size: 36px;
+  }
+  div#links img {
+    width: 50px;
+  }
+
+
+  div#box p#heading , div#box p#heading a{
+    font-size: 1.5em;
+    line-height: 1em;
+  }
+
+  div#box p#disc,div#box p#disc a {
+    font-size: 1.5em;
+    line-height: 1.2em;
+  }
+
+  div#box img {
+    width: 300px;
+  }
+  h1#headiers {
+    font-size: 4em;
+    line-height: 1em;
+  }
+  div#content div#intro {
+    font-size: 3em;
+  }
+
+  div.background table th{
+    font-size: 2.5em;
+  }
+
+  div.background table td{
+    font-size: 2em;
+  }
+  div.skillset font.skilltype {
+    font-size: 2.5em;
+  }
+
+  div.skillset li{
+    font-size: 2em;
+  }
+  
 }
