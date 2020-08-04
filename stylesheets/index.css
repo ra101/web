@@ -51,18 +51,27 @@ div#content p#heading {
 div#truck,
 div#toolbox {
   display: flex;
+  flex-wrap:wrap;
+  justify-content: center;
+}
+
+div#truck
+{
+  flex-direction: column;
+}
+
+div#toolbox {
   flex-direction: row;
-  flex-wrap: wrap;
 }
 
 div#box {
   text-align: left;
-  border: 2px solid #af7faf33;
+  border: 2px solid #0000001e;
   padding: 5px;
   border-radius: 5px;
-  background: #ffffff;
+  background: #181818;
   margin: 10px;
-  width: 260px;
+  width: calc(100% - 20px);
 }
 
 div#box p#heading {
@@ -71,17 +80,29 @@ div#box p#heading {
 
 div#box p#heading:before {
   content: "> ";
-  color: #202020;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+
+}
+
+div#box p#heading:after {
+  content: " ();";
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 div#box p#disc {
-  font-size: 14px;
-  color: dimgray;
+  font-size: 16px;
+  color: #fa8072ab;
+  text-shadow: 0px 0px 2px black;
 }
+
 
 div#box a:visited,
 div#box a:link {
-  color: #0086b3;
+  color: #fd9b90;
+  font-size: 18px;
+  text-shadow: 0px 0px 2px black;
 }
 
 
@@ -101,9 +122,19 @@ div#skills img {
 
 div#self {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: dimgray;
+  color: #e2e2e2;
+  text-shadow: 0px 0px 5px black;
   line-height: 1.5em;
 }
+
+div#self li {
+  list-style-type: none;
+}
+
+div#self li span.bullet {
+  text-shadow: 0px 0px 3px whitesmoke;
+}
+
 
 div#panel h1 {
   color: white;
@@ -117,17 +148,18 @@ td {
   vertical-align: middle;
   border: none;
   padding: 7px;
+  color: #e2e2e2;
+  text-shadow: 0px 0px 5px black;
 }
 
 table {
   width: 100%;
 }
 table a:visited {
-  color: blue;
+  color: deepskyblue;
 }
-
 table a:link {
-  color: blue;
+  color: deepskyblue;
 }
 table a:hover {
   text-decoration: underline;
@@ -207,14 +239,6 @@ font#tagline {
     margin: 20px;
   }
 
-  div#truck {
-    justify-content: center;
-  }
-
-  div#toolbox {
-    justify-content: center;
-  }
-
   div#box {
     padding: 50px;
     padding-top: 30px;
@@ -237,4 +261,10 @@ font#tagline {
 
 div#links table {
   margin-top: 5%;
+}
+
+h1#skills{
+  color:#B75CE4ab;
+  font-size: 36px;
+  text-shadow:0px 0px 10px black
 }
