@@ -7,18 +7,23 @@ div#wrapper {
   background: #121212;
   display: flex;
   flex-direction: row;
+  font-family: 'Roboto', sans-serif;
   align-content: stretch;
 }
 
 div#panel {
   background: #121212;
-  min-height: 100vh;
-  width: 22%;
-  padding-left: 2%;
-  padding-right: 2%;
-  padding-top: 2%;
+  height: calc(100vh - 20px);
+  width: 25%;
+  padding: 10px;
   box-shadow: 0px 0px 10px black;
   z-index:10;
+  display: flex;
+  position: fixed; 
+  overflow-x: hidden;
+  flex-direction: column;
+  justify-content: space-between;
+
 }
 
 a {
@@ -38,9 +43,9 @@ img#pp:hover {
 }
 
 div#content {
+  margin-left: calc(25% + 10px);
   padding: 2%;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background: #00000006;
+  background: #121212;
 }
 
 div#content p#heading {
@@ -52,16 +57,18 @@ div#truck,
 div#toolbox {
   display: flex;
   flex-wrap:wrap;
-  justify-content: center;
 }
 
 div#truck
 {
   flex-direction: column;
+  justify-content: space-between;
+
 }
 
 div#toolbox {
   flex-direction: row;
+  justify-content: space-between;
 }
 
 div#box {
@@ -120,26 +127,38 @@ div#skills img {
   width: 50px;
 }
 
-div#self {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+div#self, div#content {
   color: #e2e2e2;
   text-shadow: 0px 0px 5px black;
   line-height: 1.5em;
 }
 
-div#self li {
+div#content div#intro li {
   list-style-type: none;
+  margin-left: 70px;
+  text-shadow: 0px 0px 20px black;
+
 }
 
-div#self li span.bullet {
-  text-shadow: 0px 0px 3px whitesmoke;
+div#content div#intro {
+  font-size: 1.5em;
+  line-height: 1.8em;
+  margin-left: 50px;
+  padding-bottom: 20px;
 }
+
+div#content li span.bullet {
+  text-shadow: 0px 0px 5px whitesmoke;
+}
+
+div#content {}
 
 
 div#panel h1 {
   color: white;
   text-shadow: 0px 0px 10px black;
   text-align: center;
+  font-weight: 900;
 }
 
 table,
@@ -177,9 +196,6 @@ hr {
   border-bottom: 1px solid lightgray;
 }
 
-table#proj_header img {
-  width: 80px;
-}
 
 div#links img:hover {
   opacity: 0.8;
@@ -196,7 +212,8 @@ font#tagline {
   div#panel,
   div#content {
     width: 100%;
-    min-height: 0;
+    height: 100%;
+    position: relative;
   }
   img#pp {
     width: 300px;
@@ -217,27 +234,7 @@ font#tagline {
     width: 50px;
   }
 
-  table#proj_header p#heading {
-    font-size: 72px;
-  }
-
-  font#tagline {
-    font-size: 24px;
-  }
-
-  div#skills img {
-    width: 80px;
-  }
-
-  table#proj_header img {
-    width: 120px;
-    height: 120px;
-  }
-
-  div#circle {
-    padding: 50px;
-    margin: 20px;
-  }
+ 
 
   div#box {
     padding: 50px;
@@ -247,7 +244,7 @@ font#tagline {
   }
 
   div#box p#heading {
-    font-size: 36px;
+    font-size: 64px;
   }
 
   div#box p#disc {
@@ -263,8 +260,79 @@ div#links table {
   margin-top: 5%;
 }
 
-h1#skills{
-  color:#B75CE4ab;
+h1#headiers{
+  color:#fff;
   font-size: 36px;
-  text-shadow:0px 0px 10px black
+  text-shadow:0px 0px 10px black;
+  margin-bottom: 20px;
+}
+div.skillset {
+  padding: 10px;
+}
+div.skillset font.skilltype{
+  color:#B75CE4;
+  font-size: 1.5em;
+  line-height: 1.5em;
+  font-weight: bold;
+}
+
+
+
+font#ip_add {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  color: #00ee31;
+}
+
+#hello_emoji {
+  background-image: url(../assets/hello_emoji.svg);
+  width: 64px;
+  height:64px;
+  display: inline-block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: drop-shadow(black 5px 5px 10px);
+  animation-name: wave-animation;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  transform-origin: 70% 70%;
+}
+
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(-10deg);
+  } /* The following four values can be played with to make the waving more or less extreme */
+  40% {
+    transform: rotate(12deg);
+  }
+  60% {
+    transform: rotate(-10deg);
+  }
+  80% {
+    transform: rotate(9deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.full_scale {
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+
+div.skillset li {
+  list-style-type: none;
+  color:#D4B0D2;
+  font-size: 1.2em;
+  line-height: 1.5em;
 }
