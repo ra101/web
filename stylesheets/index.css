@@ -1,3 +1,9 @@
+body {
+  background: #121212;
+  overflow: hidden;
+  animation: overflow-removal 8s forwards;
+}
+
 div#wrapper {
   top: 0px;
   width: 100%;
@@ -201,7 +207,7 @@ hr {
 }
 
 
-div#links img:hover {
+div.links img:hover {
   opacity: 0.8;
 }
 
@@ -210,11 +216,11 @@ font#tagline {
 }
 
 
-div#links table {
+div.links table {
   margin-top: 5%;
 }
 
-h1#headiers{
+h1.headiers{
   color:#fff;
   font-size: 36px;
   text-shadow:0px 0px 10px black;
@@ -291,14 +297,14 @@ div.skillset li {
   line-height: 1.5em;
 }
 
-div.background table th{
+div#background table th{
   text-align: left;
   font-size: 1.5em;
   opacity: 1;
   text-shadow: 0px 0px 10px black;
 }
 
-div.background table td{
+div#background table td{
   padding: 0px;
   padding-left:20px;
   font-size: 1.2em;
@@ -306,34 +312,34 @@ div.background table td{
   text-shadow: 0px 0px 10px black;
 }
 
-div.background table td#date{
+div#background table td#date{
   text-align: right;
   ;
 }
 
 
-div.background table.exp th {
+div#background table.exp th {
   color:#338fec;
 }
 
-div.background table.exp td {
+div#background table.exp td {
   color:#86bbf0;
 }
 
-div.background table.exp td#date {
+div#background table.exp td#date {
   color: #4a7cbe;
 }
 
 
-div.background table.edu th {
+div#background table.edu th {
   color:#00ad57;
 }
 
-div.background table.edu td {
+div#background table.edu td {
   color:#90ee90;
 }
 
-div.background table.edu td#date {
+div#background table.edu td#date {
   color: #2e8b57;
 }
 
@@ -372,6 +378,7 @@ div#progressBar {
 }
 
 
+
 #progressBar:before {
   content:'';
   position:absolute;
@@ -393,6 +400,88 @@ div#footer {
   text-align: center;
   box-shadow: 0px 0px 10px red;
 }
+
+
+.passive {
+  opacity:0;
+}
+
+.active-top {
+  animation: fadeInTop 2s  forwards;
+}
+
+.active-left {
+  animation: fadeInLeft 2s  forwards;
+}
+
+
+div#box.active-left {
+  opacity:0;
+}
+
+
+div#introduction.active-left {
+  animation-delay: 8s;
+  opacity:0;
+}
+
+div#self.active-top {
+  opacity:0;
+  animation-delay: 1.5s;
+}
+
+div#link1 {
+  opacity:0;
+  animation-delay: 3s;
+}
+
+div#loc {
+  opacity:0;
+  animation-delay: 4.5s;
+}
+
+div#link2 {
+  opacity:0;
+  animation-delay: 6s;
+}
+
+body {
+  overflow-y: hidden;
+}
+
+@keyframes overflow-removal {
+  0%,99% {
+    overflow-y: hidden;
+  }
+  100% {
+    overflow-y: scroll;
+  }
+}
+
+@keyframes fadeInTop {
+  from {
+    transform: translateY(-50px);
+    opacity:0;
+  }
+  to {
+    opacity:1;
+  }
+}
+
+
+@keyframes fadeInLeft {
+  from {
+    transform: translateX(-100px);
+    opacity:0;
+
+  }
+  to {
+    opacity:1;
+  }
+}
+
+
+
 
 @media only screen and (max-width: 1000px) {
   div#wrapper{
@@ -429,10 +518,10 @@ div#footer {
   div#self h1 {
     font-size: 84px;
   }
-  div#links td {
+  div.links td {
     font-size: 48px;
   }
-  div#links img {
+  div.links img {
     padding:20px ;
     width: 100px;
   }
@@ -462,7 +551,7 @@ div#footer {
   div#box img {
     width: 300px;
   }
-  h1#headiers {
+  h1.headiers {
     font-size: 4em;
     line-height: 1em;
   }
@@ -470,11 +559,11 @@ div#footer {
     font-size: 3em;
   }
 
-  div.background table th{
+  div#background table th{
     font-size: 2.5em;
   }
 
-  div.background table td{
+  div#background table td{
     font-size: 2em;
   }
   div.skillset font.skilltype {

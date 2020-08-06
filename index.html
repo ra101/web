@@ -16,16 +16,16 @@
         <div id="wrapper">
             <div id="progressbar"></div>
             <div id="scrollPath"></div>
-            <div id="panel">
+            <div id="panel" class="active-left">
                 <br>
-                <div id="self">
+                <div id="self" class="active-top">
                     <center>
                         <img src="../assets/pp.jpg" id="pp">
                     </center>
                     <h1 title="< RA >">Parth Agarwal</h1>
                     <hr>
                 </div>
-                <div id="links">
+                <div class="links active-left" id="link1">
                     <table>
                         <tr>
                             <th align="right">
@@ -49,7 +49,7 @@
                         </tr>
                     </table>
                 </div>
-                <div id="links">
+                <div class="links active-top" id="loc">
                     <table>
                         <tr>
                             <th width="40%" align="right">
@@ -61,7 +61,7 @@
                         </tr>
                     </table>
                 </div>
-                <div id="links">
+                <div class="links active-top" id="link2">
                     <table style="border-top:1px solid lightgray">
                         <tr>
                             <th>
@@ -89,49 +89,51 @@
                 </div>
                 <div id="content">
                     <div class="full_scale">
-                        <h1 id="headiers" style="font-size: 4em;">
-                            <font style="font-family: 'Courier New', Courier, monospace;">></font>
-                            Hi
-                            <font id="ip_add">127.0.0.1</font>
-                            !
-                            <span id="hello_emoji"></span>
-                        </h1>
-                        <br>
-                        <div id="intro">
-                            I am currently a(n):
-                            <li>
-                                <span class="bullet">🎓</span>
-                                <font title="@Jaypee Institute of Information Technology">C.S.E. final year undergrad.</font>
-                            </li>
-                            <li>
-                                <span class="bullet">🚀</span>
-                                Python, C++ and JS Developer
-                            </li>
-                            <li>
-                                <span class="bullet">📈</span>
-                                <font title="I don't worry, if can't understand ;)">AI Enthusiast</font>
-                            </li>
-                            <li>
-                                <span class="bullet">💀</span>
-                                Backend dev.
-                            </li>
-                            <li>
-                                <span class="bullet">🎨</span>
-                                lil' bit of a Front-End Designer
-                            </li>
-                            <li>
-                                <span class="bullet">😤</span>
-                                Self-Proclaimed Photoshop Master
-                            </li>
+                        <div id="introduction" class="active-left">
+                            <h1 class="headiers" style="font-size: 4em;">
+                                <font style="font-family: 'Courier New', Courier, monospace;">></font>
+                                Hi
+                                <font id="ip_add">127.0.0.1</font>
+                                !
+                                <span id="hello_emoji"></span>
+                            </h1>
                             <br>
-                            I like to explore other languages / frameworks / tech as well, such as Electron, Unity, Django ...etc.
+                            <div id="intro">
+                                I am currently a(n):
+                                <li>
+                                    <span class="bullet">🎓</span>
+                                    <font title="@Jaypee Institute of Information Technology">C.S.E. final year undergrad.</font>
+                                </li>
+                                <li>
+                                    <span class="bullet">🚀</span>
+                                    Python, C++ and JS Developer
+                                </li>
+                                <li>
+                                    <span class="bullet">📈</span>
+                                    <font title="I don't worry, if can't understand ;)">AI Enthusiast</font>
+                                </li>
+                                <li>
+                                    <span class="bullet">💀</span>
+                                    Backend dev.
+                                </li>
+                                <li>
+                                    <span class="bullet">🎨</span>
+                                    lil' bit of a Front-End Designer
+                                </li>
+                                <li>
+                                    <span class="bullet">😤</span>
+                                    Self-Proclaimed Photoshop Master
+                                </li>
+                                <br>
+                                I like to explore other languages / frameworks / tech as well, such as Electron, Unity, Django ...etc.
+                            </div>
                         </div>
                     </div>
-                    <div class="background full_scale">
+                    <div class="full_scale" id="background">
                         <br>
                         <br>
-                        <div id="exp">
-                            <h1 id="headiers">Experience:</h1>
+                        <div id="exp" class="passive">
+                            <h1 class="headiers">Experience:</h1>
                             <hr>
                             <table class="exp">
                                 <tr>
@@ -148,8 +150,8 @@
                         </div>
                         <br>
                         <br>
-                        <div id="edu">
-                            <h1 id="headiers">Education:</h1>
+                        <div id="edu" class="passive">
+                            <h1 class="headiers">Education:</h1>
                             <hr>
                             <table class="edu">
                                 <tr>
@@ -169,9 +171,11 @@
                     <br>
                     <div class="full_scale">
                         <div id="skills">
-                            <h1 id="headiers">Skills:</h1>
-                            <hr>
-                            <div id="toolbox">
+                            <div class="passive">
+                                <h1 class="headiers">Skills:</h1>
+                                <hr>
+                            </div>
+                            <div id="toolbox" class="passive">
                                 <div class="skillset">
                                     <font class="skilltype">Languages</font>
                                     <li title="Pirate of G++ C!">C & C++</li>
@@ -215,10 +219,12 @@
                     <br>
                     <br>
                     <div id="projects">
-                        <h1 id="headiers">Projects:</h1>
-                        <hr>
+                        <div class="passive">
+                            <h1 class="headiers">Projects:</h1>
+                            <hr>
+                        </div>
                         <div id="truck">
-                            <div id="box">
+                            <div id="box" class="passive" class="passive">
                                 <p id="heading">
                                     <a href="https://t.me/MasquerBot" target="_blank">MasquerBot</a>
                                 </p>
@@ -235,43 +241,43 @@
                                             .
                                 </p>
                             </div>
-                            <div id="box">
+                            <div id="box" class="passive">
                                 <p id="heading">
                                     <a href="https://github.com/ra101/Entry-Management-Software" target="_blank">Entry Managment System</a>
                                 </p>
                                 <p id="disc">A basic booking system with general idea of host and client built using Electron (Node.JS), Firebase and other APIs</p>
                             </div>
-                            <div id="box">
+                            <div id="box" class="passive">
                                 <p id="heading">
                                     <a href="https://github.com/ra101/Reducing-the-Global-Carbon-Footprint-based-on-MARL" target="_blank">Reducing the Global Carbon Footprint based on MARL</a>
                                 </p>
                                 <p id="disc">Future work on the paper "Reducing Global Carbon Footprint based on MARL" by "Valentin Kahn".</p>
                             </div>
-                            <div id="box">
+                            <div id="box" class="passive">
                                 <p id="heading">
                                     <a href="https://github.com/ra101/kissSolver" target="_blank">kissSolver</a>
                                 </p>
                                 <p id="disc">An A.I. C.A.P.T.C.H.A. Solver browser-extension for KissAnime written in JavaScript with help of python.</p>
                             </div>
-                            <div id="box">
+                            <div id="box" class="passive">
                                 <p id="heading">
                                     <a href="https://github.com/ra101/Generic-BlockChain-container-cpp" target="_blank">BlockChain Template Container</a>
                                 </p>
                                 <p id="disc">A STL sort of container, which takes in a hash function and transaction class as inputs.</p>
                             </div>
-                            <div id="box">
+                            <div id="box" class="passive">
                                 <p id="heading">
                                     <a href="https://github.com/ra101/quantum-gates-simulator-cpp" target="_blank">Quantum Simulator {WIP}</a>
                                 </p>
                                 <p id="disc">Simulating Qubit gates/algos on binary bits to get result as of a ideal quantum computer.</p>
                             </div>
-                            <div id="box">
+                            <div id="box" class="passive">
                                 <p id="heading">
                                     <a href="https://github.com/ra101/Maze-Solver-Cpp" target="_blank">Maze Solver</a>
                                 </p>
                                 <p id="disc">Input a Image, Choose from a variety of algorithms, get solved image along with time and steps mesurement.</p>
                             </div>
-                            <div id="box">
+                            <div id="box" class="passive">
                                 <p id="heading">
                                     <a href="http://thewtvlist.epizy.com/" target="_blank">the WTV List</a>
                                 </p>
@@ -283,7 +289,7 @@
                                     This is cataloging website, with adv. search options using sql queries.
                                 </p>
                             </div>
-                            <div id="box">
+                            <div id="box" class="passive">
                                 <p id="heading">
                                     <a href="https://github.com/ra101/Connect-4" target="_blank">Connect 4</a>
                                 </p>
