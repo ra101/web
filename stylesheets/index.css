@@ -356,6 +356,7 @@ div#scrollPath {
   width:5px;
   height:100%;
   background: rgba(0,0,0,0.05);
+  z-index: 999;
 }
 
 div#progressBar {
@@ -366,6 +367,7 @@ div#progressBar {
   height:0%;
   background: linear-gradient(to top, #008aff, #00ffe7);
   animation: animate-scroll 5s linear infinite;
+  z-index: 999;
 }
 
 @keyframes animate-scroll {
