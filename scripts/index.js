@@ -1,5 +1,6 @@
 let progress = document.getElementById("progressbar");
 let passiveList = document.getElementsByClassName("passive")
+let bg = document.getElementById("bg");
 
 let totalHeight = document.body.scrollHeight - window.innerHeight;
 
@@ -24,8 +25,10 @@ function scrolly() {
         }
     }
 }
-
-
+function scrolla() {
+    bg.style.top = window.pageYOffset;
+}
+addEventListener("scroll", scrolla)
 addEventListener("scroll", scrolly)
 
 

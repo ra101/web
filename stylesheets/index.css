@@ -1,16 +1,100 @@
+div#universe {
+  display: block;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  background: radial-gradient(
+    ellipse at center,
+    #1d001d 0%,
+    #0e000e 30%,
+    #000000 50%
+  );
+  position: fixed;
+  z-index: -99;
+  animation: marginal-shift 1.5s  forwards;
+  margin-left:15%;
+}
+
+@keyframes marginal-shift{
+  0% {margin-left:0%;}
+  50% {margin-left:5%;}
+  75% {margin-left:10%;}
+  100% {margin-left: 15%;}
+}
+
+@media only screen and (max-width: 1000px) {
+  div#universe {
+    display: block;
+    background: radial-gradient(
+      circle at center,
+      #1d001d 0%,
+      #0e000e 30%,
+      #000000 70%
+    );
+    animation: none;
+    margin-left: 0;
+
+  }
+ 
+}
+
+div.dot {
+  display: block;
+  position: fixed;
+  color: #ff9eff;
+  -webkit-user-select: none;  
+  -moz-user-select: none;    
+  -ms-user-select: none;      
+  user-select: none;
+}
+
+
+div.number {
+  writing-mode: vertical-rl;
+  font-size: 24px;
+  color: #008f11;
+  font-family: "Courier New", Courier, monospace;
+  text-orientation: upright;
+  font-weight: bold;
+  position: fixed;
+  top: 0px;
+  animation: updown 1000ms infinite;
+  -webkit-user-select: none;  
+  -moz-user-select: none;    
+  -ms-user-select: none;      
+  user-select: none;
+}
+
+
+@keyframes twinkle {
+  50% {
+    transform: scale(0.3);
+    opacity: 0.3;
+  }
+}
+
+@keyframes updown {
+  50% {
+    transform: translate(0, 4px);
+  }
+}
+
 body {
-  background: #121212;
+  background-color: black;  
   overflow: hidden;
   animation: overflow-removal 8s forwards;
 }
 
+
+
+
+
 div#wrapper {
   top: 0px;
+  background: #00000099;
   width: 100%;
   left: 0px;
-
   position: absolute;
-  background: #121212;
   display: flex;
   flex-direction: row;
   font-family: 'Roboto', sans-serif;
@@ -18,19 +102,19 @@ div#wrapper {
 }
 
 div#panel {
-  background: #121212;
+  background: black;
   height: calc(100vh - 20px);
   width: 25%;
   padding: 10px;
-  box-shadow: 0px 0px 10px black;
+  box-shadow: 0px 0px 1px #454545;
   z-index:10;
   display: flex;
   position: fixed; 
   overflow-x: hidden;
   flex-direction: column;
   justify-content: space-between;
-
 }
+
 
 a {
   text-decoration: none;
@@ -52,7 +136,6 @@ div#content {
   margin-left: calc(25% + 10px);
   padding: 2%;
   padding-bottom: 0px;
-  background: #121212;
 }
 
 div#content p#heading {
@@ -80,11 +163,11 @@ div#toolbox {
 
 div#box {
   text-align: left;
-  box-shadow: 0px 0px 10px #1200004e;
+  box-shadow: 0px 0px 10px #332020;
   padding: 1.5em;
   padding-top: 0;
   border-radius: 5px;
-  background: #181818;
+  background: #000;
   margin-bottom: 1em;
   margin-top: 1em;
 
@@ -160,9 +243,6 @@ div#content div#intro {
 div#content li span.bullet {
   text-shadow: 0px 0px 5px whitesmoke;
 }
-
-div#content {}
-
 
 div#panel h1 {
   color: white;
@@ -266,7 +346,7 @@ font#ip_add {
   }
   20% {
     transform: rotate(-10deg);
-  } /* The following four values can be played with to make the waving more or less extreme */
+  } 
   40% {
     transform: rotate(12deg);
   }
@@ -380,7 +460,6 @@ div#progressBar {
 }
 
 
-
 #progressBar:before {
   content:'';
   position:absolute;
@@ -400,6 +479,7 @@ div#footer {
   margin-left: -2%;
   font-size: 2em;
   text-align: center;
+  background: black;
   box-shadow: 0px 0px 10px red;
 }
 
@@ -447,9 +527,6 @@ div#link2 {
   animation-delay: 6s;
 }
 
-body {
-  overflow-y: hidden;
-}
 
 @keyframes overflow-removal {
   0%,99% {
