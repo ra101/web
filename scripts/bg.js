@@ -1,4 +1,3 @@
-
 let universe = document.getElementById("universe");
 let dot = document.createElement("div");
 dot.setAttribute("class", "dot");

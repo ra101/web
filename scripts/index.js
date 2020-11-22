@@ -10,7 +10,7 @@ function scrolly() {
     progress.style.height = progressHeight + "%";
 
     if (passiveList.length > 0) {
-        if (window.pageYOffset + (window.innerHeight / 2) > passiveList[0].offsetTop) {
+        if (window.pageYOffset + (2 * window.innerHeight / 3) > passiveList[0].offsetTop) {
             if (passiveList[0].id == "toolbox" || passiveList[0].id == "box") {
                 passiveList[0].classList.replace("passive", "active-left")
             }
@@ -25,10 +25,7 @@ function scrolly() {
         }
     }
 }
-function scrolla() {
-    bg.style.top = window.pageYOffset;
-}
-addEventListener("scroll", scrolla)
+
 addEventListener("scroll", scrolly)
 
 
