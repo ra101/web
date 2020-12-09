@@ -22,21 +22,6 @@ div#universe {
   100% {margin-left: 15%;}
 }
 
-@media only screen and (max-width: 1000px) {
-  div#universe {
-    display: block;
-    background: radial-gradient(
-      circle at center,
-      #1d001d 0%,
-      #0e000e 30%,
-      #000000 70%
-    );
-    animation: none;
-    margin-left: 0;
-
-  }
- 
-}
 
 div.dot {
   display: block;
@@ -90,10 +75,7 @@ body {
 
 
 div#wrapper {
-  top: 0px;
   background: #00000099;
-  width: 100%;
-  left: 0px;
   position: absolute;
   display: flex;
   flex-direction: row;
@@ -563,12 +545,25 @@ div#link2 {
 
 
 @media only screen and (max-width: 1000px) {
+  div#universe {
+    display: block;
+    background: radial-gradient(
+      circle at center,
+    #530053 0%,
+      #320032 30%,
+      #1d001d 70%
+    ) no-repeat;
+    animation: none;
+    margin:0;
+    width: 110%;
+  }
   div#wrapper{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-content: center;
-    box-shadow: none;
+    width: 110%;
+
   }
 
 .full_scale {
@@ -578,13 +573,14 @@ div#link2 {
 
   div#panel,
   div#content {
-    width: 100%;
+    width: 100vw;
     min-height: 100vh;
     padding: 5%;
     position: relative;
     padding-bottom: 0px;
     margin:0; 
   }
+  
   img#pp {
     width: 300px;
     height: 300px;
