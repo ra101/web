@@ -5,7 +5,7 @@ body {
 
 .para {
     line-height: 3.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2.5rem;
     text-align: justify;
 }
 
@@ -173,8 +173,8 @@ ul {
 
 img#dp {
     background-color: #fff;
-    box-shadow: 0 0 2rem #80000040;
+    box-shadow: 0 0 2rem #d0000040;
     border-radius: 50%;
-    margin-top: -1rem;
-    width: 16rem;
+    margin-top: -0.75rem;
+    width: 18rem;
 }
