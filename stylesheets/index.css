@@ -97,6 +97,7 @@ del {
     color:#ff9933;
 }
 
+
 .blue {
     text-shadow: .1rem .1rem #99ddff66;
     color:#3399ff;
@@ -120,7 +121,7 @@ del {
 .boundary {
     width: 100%;
     height: 100%;
-    border: 1rem solid salmon;
+    border: 0.75rem solid salmon;
     box-shadow: 0 0 .1rem .1rem #80000040 inset;
     overflow: none;
     position: fixed;
@@ -177,4 +178,9 @@ img#dp {
     border-radius: 50%;
     margin-top: -0.75rem;
     width: 18rem;
+}
+
+#day {
+    text-shadow: .1rem .1rem #ff999966;
+    color:#ff3333;
 }
